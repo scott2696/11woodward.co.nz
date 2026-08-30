@@ -11,13 +11,13 @@ which is how the source site was hosted.
 ### 1. Push the repository
 
 ```bash
-cd /Users/scotthamilton/Documents/MY_SITES/11woodward.co.nz
+cd path/to/11woodward.co.nz
 git add -A
 git commit -m "Migrate pokiesrealmoney.co.com build to 11woodward.co.nz"
 git push origin main
 ```
 
-Remote is already `https://github.com/scott2696/11woodward.co.nz.git`.
+Set the remote to your GitHub repo, e.g. `git remote set-url origin git@github.com:<account>/11woodward.co.nz.git`.
 
 ### 2. Enable Pages
 
@@ -45,10 +45,10 @@ At your domain registrar / DNS provider for `11woodward.co.nz`, create:
 | AAAA  | `@`         | `2606:50c0:8001::153` |
 | AAAA  | `@`         | `2606:50c0:8002::153` |
 | AAAA  | `@`         | `2606:50c0:8003::153` |
-| CNAME | `www`       | `scott2696.github.io.` |
+| CNAME | `www`       | `<account>.github.io.` |
 
 (If your DNS provider does not allow A records on the apex, use its ALIAS/ANAME
-feature pointing to `scott2696.github.io`, or move DNS to Cloudflare.)
+feature pointing to `<account>.github.io`, or move DNS to Cloudflare.)
 
 ### 4. HTTPS
 
